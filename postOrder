@@ -1,0 +1,12 @@
+
+public void postOrder(Node root) {
+
+    if(root != null) {
+        postOrder(root.getLeft());
+        postOrder(root.getRight());
+        System.out.println(root.getData());
+    } else {
+        return null;
+    }
+
+}
