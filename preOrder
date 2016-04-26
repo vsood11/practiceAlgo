@@ -1,0 +1,12 @@
+
+public void preOrder(Node root) {
+
+    if(root != null) {
+        Sytem.out.println(root.getData());
+        preOrder(root.getLeft());
+        preOrder(root.getRight());
+    } else {
+        return null;
+    }
+
+}
