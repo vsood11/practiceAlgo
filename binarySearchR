@@ -1,4 +1,7 @@
 
+/**
+* Binary Search
+*/
 public boolean bs(int[] input, int key, int index) {
 
    if(index < 0) {
