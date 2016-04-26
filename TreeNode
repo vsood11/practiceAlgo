@@ -1,0 +1,29 @@
+
+public class TreeNode<T> {
+      
+      T data;
+      TreeNode<T> left;
+      TreeNode<T> right;
+      
+      
+      public T getData() {
+          return this.data;
+      }
+      public TreeNode<T> getLeft() {
+          return this.left;
+      }
+      public TreeNode<T> getRight() {
+          return this.right;
+      }
+      
+      public void setData(T data) {
+          this.data = data;
+      }
+      public void setLeft(TreeNode<T> node) {
+          this.left = node;
+      }
+      public void setRightTreeNode<T> node) {
+          this.right = node;
+      }
+}
+
