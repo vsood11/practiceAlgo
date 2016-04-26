@@ -1,0 +1,15 @@
+
+public boolean bs(int[] input, int key, int index) {
+
+   if(index < 0) {
+      return false;
+    } else if(index == 0) { 
+       return (input[inde] == key);
+    } else if(input[index] == key)  [
+      return true;
+    } else if(key < input[index]) {
+        return bs(input, key, (0+index)/2);
+    } else {
+        return bs(input, key, (index+input.length)/2);
+    }
+}
