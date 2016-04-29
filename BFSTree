@@ -1,0 +1,16 @@
+
+public class BFSTree {
+
+  public static bfs(TreeNode<T> root) {
+    
+    Queue q = new LikedList();
+    q.add(root);
+    
+    while(!q.isEmpty()) {
+      TreeNode<T> temp  = q.remove();
+      System.out.println(temp.getData());
+      q.add(temp.getLeft());
+      q.add(temp.getRight());
+    }
+      }
+}
