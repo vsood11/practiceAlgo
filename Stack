@@ -1,0 +1,39 @@
+
+public class Stack {
+
+	  private Object[] input;
+	  int top = -1;
+	  
+	  public Stack(int size) {
+	    input = new Object[size];
+	  }
+
+	  public Object pop() {
+	    Object topEle = getTopEle();
+	    input[top--] = null;
+	    return topEle;
+	  }
+
+	  public void push(Object ele) {
+	    if(top <= input.length) {
+	       input[++top] = ele;
+	    } else {
+	       System.out.println("Stack is full");
+	    }
+	  }
+
+	  public Object top() {
+	     return getTopEle();
+	  }
+	  
+	  private Object getTopEle() {
+	      if(top == -1) {
+	      System.out.println("Stack is empty");
+	      return null;
+	      } else {
+	  	    Object topEle = input[top];
+		    return topEle;
+	      }
+	  }
+
+	}
