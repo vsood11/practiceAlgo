@@ -1,0 +1,36 @@
+public class AdjList {
+
+	  private Set[] nodeList = null;
+	  
+	  public AdjList(int numOfNodes) {
+	    nodeList = new Set[numOfNodes];    
+	  }
+
+	  public Collection<Integer> getAdjListOfVertices(int node) {
+	    return nodeList[node-1];
+	  }
+
+	  public void setAdjList(int node, Set<Integer> list) {
+	    nodeList[node-1] = list;
+	  }
+	  
+	  public void addAdjNode(int node, int adjNode) {
+	    Set<Integer> adjList = (nodeList[node-1]);
+	    if(adjList == null) {
+	         adjList = new HashSet<>();
+	         adjList.add(adjNode);
+	    } else {
+	          adjList.add(adjNode);
+	    }
+	    nodeList[node-1] = adjList;
+	    
+	    Set<Integer> adjNodeList = (nodeList[adjNode-1]);
+	    if(adjNodeList == null) {
+	         adjList = new HashSet<>();
+	         adjList.add(node);
+	    } else {
+	          adjList.add(node);
+	    }
+	    nodeList[adjNode-1] = adjNodeList;
+	  }
+	}
