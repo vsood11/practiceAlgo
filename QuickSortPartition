@@ -1,11 +1,7 @@
 public class Partition {
 
 
-public static int partition(int[] input, int index) {
-    input = swap(0, index, input);
-    int i = 0;
-    int j = input.length - 1;
-    
+public static int partition(int[] input, int i, int j) {
     while(i <= j) {
         
       while(input[i] <= input[0]) {
