@@ -1,0 +1,27 @@
+public class AdjMatrix {
+
+    private int[][] edgeMatrix;
+    
+    pubblic Adjmatrix(int numOfNodes) {
+      edgeMatrix = new int[numOfNodes][numOfNodes]();
+    }
+
+    public void insertEdge(int startEdge, int endEdge) {
+      edgeMatrix[startEdge-1][endEdge-1] = 1;
+      edgeMatrix[endEdge-1][startEdge-1] = 1;
+    }
+
+    public void removeEdge(){
+      edgeMatrix[startEdge-1][endEdge-1] = 0;
+      edgeMatrix[endEdge-1][startEdge-1] = 0;    
+    }
+
+  public void displayEdge() {
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j < n; j++) {
+                System.out.println("edege between "+i+"->"+j+" "+edgeMatrix[i][j]);
+            }
+        }
+  
+    }
+}
