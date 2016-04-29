@@ -1,0 +1,12 @@
+
+public class DFSTree {
+
+  public static dfs(TreeNode<T> root) {
+    if(root != null) {
+      System.out.println(root.getData());
+      dfs(root.getLeft());
+      dfs(root.getRight());
+    } else {
+      return;
+    }
+  }
