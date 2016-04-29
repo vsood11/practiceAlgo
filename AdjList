@@ -33,4 +33,15 @@ public class AdjList {
 	    }
 	    nodeList[adjNode-1] = adjNodeList;
 	  }
+	  
+	 public void removeAdjNode(int node, int adjNode) {
+	    Set<Integer> adjList = (nodeList[node-1]);
+	    adjList.remove(adjNode);
+	    nodeList[node-1] = adjList;
+	    
+	    Set<Integer> adjNodeList = (nodeList[adjNode-1]);
+	    adjNodeList.remove(node);
+	    nodeList[adjNode-1] = adjNodeList;
+	  }
+	  
 	}
